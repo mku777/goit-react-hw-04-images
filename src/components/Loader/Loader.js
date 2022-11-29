@@ -1,10 +1,21 @@
-import { Oval } from 'react-loader-spinner';
+import { ThreeCircles } from 'react-loader-spinner';
 import s from './Loader.module.css';
 
 export default function Loader () {
   return (
     <div className={s.Container}>
-      <Oval color="#00BFFF" height={120} width={120} />
+      <ThreeCircles
+  height="100"
+  width="100"
+  color="#8B00FF"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  ariaLabel="three-circles-rotating"
+  outerCircleColor=""
+  innerCircleColor=""
+  middleCircleColor=""
+/>
     </div>
   );
 };
