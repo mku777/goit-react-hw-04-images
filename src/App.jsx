@@ -86,7 +86,10 @@ export const App = () => {
         <ImageGallery images={images} onModal={openModal} />
       )}
       {showModal && <Modal largeImage={largeImage} closeModal={closeModal} />}
-      {showLoadMore && <Button onShowMore={showMore} />}
+      {showLoadMore && images.length % 12 < 1 && images.length > 0 && (
+        <Button onShowMore={showMore} />
+      )}
+      {/* {showLoadMore && <Button onShowMore={showMore} />} */}
       {loading && <Loader />}
     </div>
   );
